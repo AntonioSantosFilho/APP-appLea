@@ -1,5 +1,7 @@
 import 'package:applealogin/components/auth_form.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'dart:io';
 
 class AuthPage extends StatelessWidget {
   const AuthPage({super.key});
@@ -10,10 +12,11 @@ class AuthPage extends StatelessWidget {
         backgroundColor: const Color.fromARGB(255, 207, 221, 240),
         body: Stack(
           children: [
-            Column(
+            
+              Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Image.asset('assets/images/footer.png', fit: BoxFit.cover),
+                if (!kIsWeb)   Image.asset('assets/images/footer.png', fit: BoxFit.cover),
               ],
             ),
             Center(

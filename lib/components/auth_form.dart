@@ -1,3 +1,4 @@
+import 'package:applealogin/pages/menu_page.dart';
 import 'package:flutter/material.dart';
 
 import '../models/auth_form_data.dart';
@@ -18,6 +19,11 @@ class _AuthFormState extends State<AuthForm> {
     if (!isValid) {
       return;
     }
+
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => MenuPage()),
+    );
   }
 
   @override
