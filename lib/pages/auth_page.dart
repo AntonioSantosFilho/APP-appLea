@@ -7,7 +7,7 @@ class AuthPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 207, 221, 240),
+        backgroundColor: const Color.fromARGB(255, 207, 221, 240),
         body: Stack(
           children: [
             Column(
@@ -22,7 +22,7 @@ class AuthPage extends StatelessWidget {
                 children: [
                   Image.asset('assets/images/logo_lea.png',
                       fit: BoxFit.contain),
-                  AuthForm(),
+                  const AuthForm(),
                 ],
               )),
             ),
