@@ -1,22 +1,20 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:sidebarx/sidebarx.dart';
 
 class MenuPage extends StatelessWidget {
   const MenuPage({Key? key});
 
   void _handleCardClick(BuildContext context, int index) {
-
     print('Card clicado: $index');
 
-    if(index == 0){
-
-    }else if(index == 1){
-
-    }else if(index == 2){
-    }else if(index == 3){
-
-    }else if(index == 4){
-    }else if(index == 5){}
-  
+    if (index == 0) {
+      print('Card clicado: $index');
+    } else if (index == 1) {
+    } else if (index == 2) {
+    } else if (index == 3) {
+    } else if (index == 4) {
+    } else if (index == 5) {}
   }
 
   @override
@@ -33,12 +31,11 @@ class MenuPage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 207, 221, 240),
-      appBar: AppBar(title: const Text('Menu')),
       body: Padding(
         padding: const EdgeInsets.all(25.0),
         child: GridView.builder(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, // Número de colunas
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: kIsWeb ? 6 : 2,
             crossAxisSpacing: 10.0,
             mainAxisSpacing: 10.0,
           ),
@@ -48,15 +45,11 @@ class MenuPage extends StatelessWidget {
               onTap: () => _handleCardClick(context, index),
               child: Card(
                 color: Color(0xFF03A9F4),
-                child: SizedBox(
-                  width: 200.0, // Defina a largura desejada para o card
-                  height: 200.0, // Defina a altura desejada para o card
-                  child: Padding(
-                    padding: const EdgeInsets.all(22),
-                    child: Image.asset(
-                      imagePaths[index],
-                      fit: BoxFit.cover,
-                    ),
+                child: Padding(
+                  padding: const EdgeInsets.all(22),
+                  child: Image.asset(
+                    imagePaths[index],
+                    fit: BoxFit.cover,
                   ),
                 ),
               ),
