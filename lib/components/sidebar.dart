@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:sidebarx/sidebarx.dart';
-
 import '../pages/menu_page.dart';
 
 class SidebarXExampleApp extends StatelessWidget {

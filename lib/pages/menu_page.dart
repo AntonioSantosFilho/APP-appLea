@@ -1,6 +1,5 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:sidebarx/sidebarx.dart';
 
 class MenuPage extends StatelessWidget {
   const MenuPage({Key? key});
