@@ -1,3 +1,4 @@
+import 'package:applealogin/components/sidebar.dart';
 import 'package:applealogin/pages/menu_page.dart';
 import 'package:flutter/material.dart';
 
@@ -81,10 +82,8 @@ class _AuthFormState extends State<AuthForm> {
                     const SizedBox(height: 12),
                     ElevatedButton(
                       onPressed: _submit,
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.blue),
-                      child: Text(_FormData.isLogin ? 'Entrar' : 'Cadastrar',
-                          style: const TextStyle(color: Colors.white)),
+                      style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
+                      child: Text(_FormData.isLogin ? 'Entrar' : 'Cadastrar', style: const TextStyle(color: Colors.white)),
                     ),
                     TextButton(
                         onPressed: () {
@@ -92,9 +91,7 @@ class _AuthFormState extends State<AuthForm> {
                             _FormData.toggleAuthMode();
                           });
                         },
-                        child: Text(_FormData.isLogin
-                            ? 'Criar uma nova conta?'
-                            : 'Já possui conta?')),
+                        child: Text(_FormData.isLogin ? 'Criar uma nova conta?' : 'Já possui conta?')),
                   ],
                 )),
           )),

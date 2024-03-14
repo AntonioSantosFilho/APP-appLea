@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   sidebarx: ^0.16.3
   responsive_grid_list: ^1.4.0
+  flutter_cached_pdfview: ^0.4.2
 
 dev_dependencies:
   flutter_test:
